@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  const API = 'http://localhost:8080/api';
+  const API = 'jarviss-production-18ab.up.railway.app/api';
 
   // ── Chat UI refs ─────────────────────────────────────────
   const chatArea = document.getElementById('chatArea');
