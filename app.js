@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  const API = 'https://jarviss-eta.vercel.app/api';
+  const API = 'https://jarviss-production-fb57.up.railway.app/';
 
   // ── Chat UI refs ─────────────────────────────────────────
   const chatArea = document.getElementById('chatArea');
