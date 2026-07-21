@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jarvis — AI Personal Task Manager. Kelola to-do list harian Anda dengan bahasa alami.">
+  <title>Jarvis — Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- jsPDF Library for Client-side PDF Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div id="main-container">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <button id="newChatBtn" class="new-chat-btn">
+          <span>+</span> Chat Baru
+        </button>
+      </div>
+      <div class="chat-list" id="chatList"></div>
+    </aside>
+
+    <!-- Mobile Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Chat App Area -->
+    <div id="app">
+      <header class="header">
+        <button id="sidebarToggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">☰</button>
+        <div class="header-icon">⚡</div>
+        <div class="header-info">
+          <h1>Jarvis</h1>
+          <p><span class="status-dot" id="statusDot"></span> <span id="statusText">Menghubungkan...</span></p>
+        </div>
+        <button id="exportPdfBtn" class="export-pdf-btn" title="Ekspor obrolan/tugas ke PDF">
+          📄 Ekspor PDF
+        </button>
+      </header>
+
+      <main class="chat-area" id="chatArea"></main>
+
+      <form class="input-bar" id="inputBar">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="halo jarvis, tolong ininya diapakan dulu biar ga apa banget"
+          autocomplete="off"
+        >
+        <button type="submit" aria-label="Kirim">➤</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
